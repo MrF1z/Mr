@@ -27,6 +27,12 @@ Section:NewToggle("Функция","День, нет тумана, ярко", fu
 	end
 end)
 
+local Section = Tab:NewSection("Командая Строка")
+Section:NewButton("Infinite Yield", "Скрипт", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	print("Infinite Yield")
+end)
+
 local Tab = Window:NewTab("Фан штуки")
 local Section = Tab:NewSection("Размер")
 Section:NewTextBox("Цифры", "Измени размер своего персонажа вставив число!", function(txt)
