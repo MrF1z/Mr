@@ -1,0 +1,40 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+local Window = Library.CreateLib("Чит от MrFiz (THE FOREST)", "RJTheme1")
+local Tab = Window:NewTab("Основные Функции")
+local Section = Tab:NewSection("Телепорт")
+
+Section:NewButton("Спавн", "ButtonInfo", function()
+	game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(60.3167801, 20.9235306, -186.06958, 0.92744416, -1.08631371e-08, -0.373961657, -4.59630867e-09, 1, -4.04478797e-08, 0.373961657, 3.92319919e-08, 0.92744416))
+	print("Teleport")
+end)
+
+local Section = Tab:NewSection("Скорость")
+Section:NewSlider("Значение","Скорость от 14 до 100", 100, 14, function(s)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local Section = Tab:NewSection("Освещение")
+Section:NewToggle("Функция","День, нет тумана, ярко", function(state)
+	if state then
+		game:GetService("Lighting").ClockTime = 15
+		game:GetService("Lighting").Brightness = 2
+		game:GetService("Lighting").FogEnd = 10000
+		print("Toggle On")
+		else
+			game:GetService("Lighting").ClockTime = 2.5
+		game:GetService("Lighting").Brightness = 0
+		game:GetService("Lighting").FogEnd = 150
+	end
+end)
+
+local Tab = Window:NewTab("Фан штуки")
+local Section = Tab:NewSection("Размер")
+Section:NewTextBox("Цифры", "Измени размер своего персонажа вставив число!", function(txt)
+	game.Players.LocalPlayer.Character.Humanoid.HipHeight = txt
+end)
+
+local Section = Tab:NewSection("Прыжок")
+Section:NewSlider("Значение","Прыжок от 0 до 200", 200, 0, function(ak)
+	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = ak
+end)
