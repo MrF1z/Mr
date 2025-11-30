@@ -1,46 +1,491 @@
+if game.PlaceId == 15318290629 then
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("Чит от MrFiz (THE FOREST)", "RJTheme1")
-local Tab = Window:NewTab("Основные Функции")
-local Section = Tab:NewSection("Телепорт")
-
-Section:NewButton("Спавн", "ButtonInfo", function()
-	game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(60.3167801, 20.9235306, -186.06958, 0.92744416, -1.08631371e-08, -0.373961657, -4.59630867e-09, 1, -4.04478797e-08, 0.373961657, 3.92319919e-08, 0.92744416))
-	print("Teleport")
+local Window = Library.CreateLib("Симулятор падения в Подвал (Скрипт)", "RJTheme1")
+local Tab = Window:NewTab("Главная")
+local Section = Tab:NewSection("Фарм подвалов")
+Section:NewToggle("АвтоФарм", "Фарм", function(state)
+    if state then 
+getgenv().tp = true
+while getgenv().tp do
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(112.397804, 2066.11499, -3.04643917, -0.998026729, -0.00458312454, 0.0626232103, -8.89585916e-09, 0.997332633, 0.0729903653, -0.0627906919, 0.0728463307, -0.995364606))
+task.wait(3)
+end
+    else
+getgenv().tp = false
+while getgenv().tp do
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(112.397804, 2066.11499, -3.04643917, -0.998026729, -0.00458312454, 0.0626232103, -8.89585916e-09, 0.997332633, 0.0729903653, -0.0627906919, 0.0728463307, -0.995364606))
+task.wait(3)
+end
+    end
+end)
+Section:NewButton("Фарм подвалов по клику", "Фарм подвалов 2", function()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(43.6760941, 3651.49121, 2.25416136, -0.00627999799, 0.0682234913, -0.997650325, -1.33108028e-06, 0.997669995, 0.0682248399, 0.999980271, 0.000429779844, -0.00626527471))
+wait(2.15)
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(112.397804, 2066.11499, -3.04643917, -0.998026729, -0.00458312454, 0.0626232103, -8.89585916e-09, 0.997332633, 0.0729903653, -0.0627906919, 0.0728463307, -0.995364606))
 end)
 
-local Section = Tab:NewSection("Скорость")
-Section:NewSlider("Значение","Скорость от 14 до 100", 100, 14, function(s)
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+local Section = Tab:NewSection("Админка")
+Section:NewButton("Infinite Yield", "CHITI", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
 
-local Section = Tab:NewSection("Освещение")
-Section:NewToggle("Функция","День, нет тумана, ярко", function(state)
-	if state then
-		game:GetService("Lighting").ClockTime = 15
-		game:GetService("Lighting").Brightness = 2
-		game:GetService("Lighting").FogEnd = 10000
-		print("Toggle On")
-		else
-			game:GetService("Lighting").ClockTime = 2.5
-		game:GetService("Lighting").Brightness = 0
-		game:GetService("Lighting").FogEnd = 150
+--деньги и не деньги
+local Tab = Window:NewTab("Фарм Дождей")
+local Section = Tab:NewSection("Телепорт к себе деньги")
+Section:NewButton("Аметист", "Аметисты", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Isumrud_Ametist' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Сапфир", "Сапфирчик", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Isumrud_Sapfir' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Рубин", "Рубин", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Isumrud_Rubin' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Золото", "Телепорт к себе", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Isumrud_Gold' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Зеленое золото", "Тп деньги", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Isumrud_Green' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Голубое золото", "Тп деньги", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Isumrud_Blue' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Красные звёзды", "Тп не деньги", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Shliapa' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Грибоед", "Грибы", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Mushroom' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Снежинка", "Снег", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Snezinka' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Пузырь", "пУЗЫРЕК", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Bubble' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Орео", "Шоколад", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'OreoBall' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Бомба", "Петарда", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'Bomb' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+Section:NewButton("Материи", "Черная", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'd4' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
+
+
+--авто собиралка (авто фарм)
+
+local Tab = Window:NewTab("Авто-фарм")
+local Section = Tab:NewSection("Авто-Собиралки (Cоветую включить Noclip)")
+Section:NewToggle("Авто-Аметисты", "Собирает и тпхает руду каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Ametist' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Ametist' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Сапфиры", "Собирает и тпхает руду каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Sapfir' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Sapfir' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Рубины", "Собирает и тпхает руду каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Rubin' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Rubin' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Золото", "Собирает и тпхает руду каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Gold' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Gold' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Зелёное золото", "Собирает и тпхает руду каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Green' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Green' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)Section:NewToggle("Авто-Голубое золото", "Собирает и тпхает руду каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Blue' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Isumrud_Blue' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)Section:NewToggle("Авто-Звёзды", "Собирает и тпхает звёзды каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Shliapa' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Shliapa' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Грибы", "Собирает и тпхает грибы каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Mushroom' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Mushroom' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Снежинки", "Собирает и тпхает снежинки каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Snezinka' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Snezinka' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Орео", "Собирает и тпхает орео каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'OreoBall' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'OreoBall' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Пузыри", "Собирает и тпхает пузыри каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Bubble' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Bubble' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Материи", "Собирает и тпхает материи каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'd4' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'd4' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
+end)
+Section:NewToggle("Авто-Бомбы", "Собирает и тпхает бомбы каждые 10 секунд", function(stats)
+    if stats then 
+getgenv().dat = true
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Bomb' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+task.wait(10)
+end
+    else
+getgenv().dat = false
+while getgenv().dat do
+
+	for i,v in pairs(game:GetDescendants()) do
+	if v.Name == 'Bomb' then
+	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end
+
+end
+    end
 end)
 
-local Section = Tab:NewSection("Командая Строка")
-Section:NewButton("Infinite Yield", "Скрипт", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-	print("Infinite Yield")
+--телепортации
+
+local Tab = Window:NewTab("Телепорты")
+local Section = Tab:NewSection("Телепортации")
+Section:NewButton("Спрятаться в текстурах", "Тп", function()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(232.828384, 3671.70996, 59.1088982, 0.700955868, 1.27243112e-07, 0.713204622, -1.1272089e-07, 1, -6.76254004e-08, -0.713204622, -3.29906413e-08, 0.700955868))
+end)
+Section:NewButton("Спавн", "Тп", function()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(-0.547018349, 3668.61768, 0.281818092, -0.00628373493, -1.68166547e-08, -0.999980271, -1.01806336e-07, 1, -1.61772498e-08, 0.999980271, 1.01702675e-07, -0.00628373493))
+end)
+Section:NewButton("Гора", "Тп", function()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(270.205963, 3988.04053, 325.44693, 0.309325606, -5.06090316e-08, 0.950956166, 8.64503562e-08, 1, 2.50986574e-08, -0.950956166, 7.44468451e-08, 0.309325606))
+end)
+Section:NewButton("Подвал", "Тп", function()
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(95.663002, 1991.70679, 0.835511863, 0.012565434, 3.61318584e-08, 0.999921024, 1.20323229e-09, 1, -3.61498316e-08, -0.999921024, 1.65737557e-09, 0.012565434))
+end)
+Section:NewButton("Прозрачный", "Тп", function()
+workspace.pon:GetChildren()[4].Transparency = 0
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(-16253.5049, 8812.38867, -9711.22754, 0.018848734, -1.11103809e-07, 0.999822319, 5.08467135e-09, 1, 1.11027695e-07, -0.999822319, 2.99103653e-09, 0.018848734))
 end)
 
-local Tab = Window:NewTab("Фан штуки")
-local Section = Tab:NewSection("Размер")
-Section:NewTextBox("Цифры", "Измени размер своего персонажа вставив число!", function(txt)
-	game.Players.LocalPlayer.Character.Humanoid.HipHeight = txt
-end)
-
-local Section = Tab:NewSection("Прыжок")
-Section:NewSlider("Значение","Прыжок от 0 до 200", 200, 0, function(ak)
-	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = ak
-end)
+end
