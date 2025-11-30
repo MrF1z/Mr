@@ -156,10 +156,10 @@ end
 end
     end
 end)
-Section:NewToggle("Авто-Сапфиры", "Собирает и тпхает руду каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+Section:NewToggle("Авто-Сапфиры", "Собирает и тпхает руду каждые 10 секунд", function(stats1)
+    if stats1 then 
+getgenv().datt = true
+while getgenv().datt do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Sapfir' then
@@ -170,8 +170,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().datt = false
+while getgenv().datt do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Sapfir' then
@@ -182,10 +182,10 @@ end
 end
     end
 end)
-Section:NewToggle("Авто-Рубины", "Собирает и тпхает руду каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+Section:NewToggle("Авто-Рубины", "Собирает и тпхает руду каждые 10 секунд", function(stats2)
+    if stats2 then 
+getgenv().daat = true
+while getgenv().daat do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Rubin' then
@@ -196,8 +196,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().daat = false
+while getgenv().daat do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Rubin' then
@@ -208,10 +208,10 @@ end
 end
     end
 end)
-Section:NewToggle("Авто-Золото", "Собирает и тпхает руду каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+Section:NewToggle("Авто-Золото", "Собирает и тпхает руду каждые 10 секунд", function(stats3)
+    if stats3 then 
+getgenv().ddat = true
+while getgenv().ddat do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Gold' then
@@ -222,8 +222,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().ddat = false
+while getgenv().ddat do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Gold' then
@@ -234,10 +234,10 @@ end
 end
     end
 end)
-Section:NewToggle("Авто-Зелёное золото", "Собирает и тпхает руду каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+Section:NewToggle("Авто-Зелёное золото", "Собирает и тпхает руду каждые 10 секунд", function(stats4)
+    if stats4 then 
+getgenv().daatt = true
+while getgenv().daatt do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Green' then
@@ -248,8 +248,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().daatt = false
+while getgenv().daatt do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Green' then
@@ -259,10 +259,10 @@ end
 
 end
     end
-end)Section:NewToggle("Авто-Голубое золото", "Собирает и тпхает руду каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+end)Section:NewToggle("Авто-Голубое золото", "Собирает и тпхает руду каждые 10 секунд", function(stats5)
+    if stats5 then 
+getgenv().ddaatt = true
+while getgenv().ddaatt do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Blue' then
@@ -273,8 +273,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().ddaatt = false
+while getgenv().ddaatt do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Isumrud_Blue' then
@@ -284,10 +284,10 @@ end
 
 end
     end
-end)Section:NewToggle("Авто-Звёзды", "Собирает и тпхает звёзды каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+end)Section:NewToggle("Авто-Звёзды", "Собирает и тпхает звёзды каждые 10 секунд", function(stats6)
+    if stats6 then 
+getgenv().datto = true
+while getgenv().datto do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Shliapa' then
@@ -298,8 +298,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().datto = false
+while getgenv().datto do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Shliapa' then
@@ -310,10 +310,10 @@ end
 end
     end
 end)
-Section:NewToggle("Авто-Грибы", "Собирает и тпхает грибы каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+Section:NewToggle("Авто-Грибы", "Собирает и тпхает грибы каждые 10 секунд", function(stats7)
+    if stats7 then 
+getgenv().ddoat = true
+while getgenv().ddoat do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Mushroom' then
@@ -324,8 +324,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().ddoat = false
+while getgenv().ddoat do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Mushroom' then
@@ -336,10 +336,10 @@ end
 end
     end
 end)
-Section:NewToggle("Авто-Снежинки", "Собирает и тпхает снежинки каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+Section:NewToggle("Авто-Снежинки", "Собирает и тпхает снежинки каждые 10 секунд", function(stats8)
+    if stats8 then 
+getgenv().dar = true
+while getgenv().dar do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Snezinka' then
@@ -350,8 +350,8 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().dar = false
+while getgenv().dar do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'Snezinka' then
@@ -362,10 +362,10 @@ end
 end
     end
 end)
-Section:NewToggle("Авто-Орео", "Собирает и тпхает орео каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
+Section:NewToggle("Авто-Орео", "Собирает и тпхает орео каждые 10 секунд", function(stats9)
+    if stats9 then 
+getgenv().dan = true
+while getgenv().dan do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'OreoBall' then
@@ -376,89 +376,11 @@ end
 task.wait(10)
 end
     else
-getgenv().dat = false
-while getgenv().dat do
+getgenv().dan = false
+while getgenv().dan do
 
 	for i,v in pairs(game:GetDescendants()) do
 	if v.Name == 'OreoBall' then
-	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	end
-end
-
-end
-    end
-end)
-Section:NewToggle("Авто-Пузыри", "Собирает и тпхает пузыри каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
-
-	for i,v in pairs(game:GetDescendants()) do
-	if v.Name == 'Bubble' then
-	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	end
-end
-
-task.wait(10)
-end
-    else
-getgenv().dat = false
-while getgenv().dat do
-
-	for i,v in pairs(game:GetDescendants()) do
-	if v.Name == 'Bubble' then
-	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	end
-end
-
-end
-    end
-end)
-Section:NewToggle("Авто-Материи", "Собирает и тпхает материи каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
-
-	for i,v in pairs(game:GetDescendants()) do
-	if v.Name == 'd4' then
-	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	end
-end
-
-task.wait(10)
-end
-    else
-getgenv().dat = false
-while getgenv().dat do
-
-	for i,v in pairs(game:GetDescendants()) do
-	if v.Name == 'd4' then
-	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	end
-end
-
-end
-    end
-end)
-Section:NewToggle("Авто-Бомбы", "Собирает и тпхает бомбы каждые 10 секунд", function(stats)
-    if stats then 
-getgenv().dat = true
-while getgenv().dat do
-
-	for i,v in pairs(game:GetDescendants()) do
-	if v.Name == 'Bomb' then
-	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	end
-end
-
-task.wait(10)
-end
-    else
-getgenv().dat = false
-while getgenv().dat do
-
-	for i,v in pairs(game:GetDescendants()) do
-	if v.Name == 'Bomb' then
 	v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 	end
 end
